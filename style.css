@@ -161,3 +161,40 @@ footer {
   padding: 30px;
   color: #777;
 }
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NAVBAR SCROLL EFFECT */
+.navbar.scrolled {
+  background: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* HERO ZOOM EFFECT */
+.hero {
+  animation: zoom 20s infinite alternate;
+}
+
+@keyframes zoom {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+
+/* BUTTON EFFECT */
+.search-box button {
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  transform: scale(1.05);
+  background: #a83228;
+}
