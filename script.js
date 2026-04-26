@@ -100,3 +100,20 @@ function generateTrip() {
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
+function getImage(destination) {
+  const images = {
+    marrakech: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    merzouga: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    chefchaouen: "https://images.unsplash.com/photo-1524492449090-1f0c9d5c2b57"
+  };
+
+  return images[destination] || "https://images.unsplash.com/photo-1501785888041-af3ef285b470";
+}
+
+function getHotelPrice(budget, days) {
+  const avg = budget / days;
+
+  if (avg < 200) return 80 + Math.floor(Math.random() * 40);
+  if (avg < 500) return 150 + Math.floor(Math.random() * 100);
+  return 300 + Math.floor(Math.random() * 200);
+}
