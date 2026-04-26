@@ -1,2 +1,1 @@
-console.log("Yalla Trip Ready 🚀");
-<script src="script.js"></script>
+console.log("Yalla Trip ready 🚀");
