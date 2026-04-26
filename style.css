@@ -72,29 +72,14 @@ body {
 /* HERO */
 .hero {
   height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("accueil.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-  url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70');
-
-  background-size: cover;
-  background-position: center;
   color: white;
 }
-
-.hero h1 {
-  font-size: 50px;
-  font-weight: 700;
-}
-
-.hero p {
-  margin-top: 15px;
-  font-size: 18px;
-}
-
 /* SEARCH BOX */
 .search-box {
   margin-top: 30px;
