@@ -98,14 +98,14 @@ body {
 /* ================= SEARCH BOX ================= */
 .search-box {
   display: flex;
-  align-items: center;
+  align-items: stretch; /* IMPORTANT */
   background: white;
-  border-radius: 14px;
+  border-radius: 50px;
   overflow: hidden;
-  margin-top: 25px;
-  max-width: 700px;
+  margin-top: 30px;
+  max-width: 750px;
   width: 100%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
 .search-box input {
@@ -115,19 +115,28 @@ body {
   outline: none;
 }
 
+.search-box input {
+  height: 60px; /* 🔥 FIX ALIGNEMENT */
+}
+
 .search-box input:nth-child(1),
 .search-box input:nth-child(2) {
   border-right: 1px solid #eee;
 }
 
 .search-box button {
-  background: #d35400;
+  background: linear-gradient(135deg, #d35400, #ff7a18);
   color: white;
   border: none;
-  padding: 15px 25px;
+  padding: 0 30px;
   cursor: pointer;
   font-weight: 600;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* 🔥 FIX */
+  border-radius: 0; /* 🔥 IMPORTANT */
+  min-width: 120px;
 }
 
 .search-box button:hover {
