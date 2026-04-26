@@ -258,3 +258,12 @@ body {
 .card {
   transition: 0.4s;
 }
+function getImage(destination) {
+  const images = {
+    marrakech: "marrakech.jpg",
+    merzouga: "merzouga.jpg",
+    chefchaouen: "chefchaouen.jpg"
+  };
+
+  return images[destination] || "acceuil.jpeg";
+}
