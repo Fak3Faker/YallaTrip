@@ -3,17 +3,17 @@ function generateTrip() {
   const budgetInput = document.getElementById("budget");
   const daysInput = document.getElementById("days");
 
-  const destination = destinationInput.value.trim().toLowerCase();
-  const budget = parseInt(budgetInput.value);
-  const days = parseInt(daysInput.value);
+  let destination = destinationInput.value.trim().toLowerCase();
+  const budget = Number(budgetInput.value);
+  const days = Number(daysInput.value);
 
   const loader = document.getElementById("loader");
   const result = document.getElementById("result");
   const output = document.getElementById("trip-output");
 
   // ================= VALIDATION =================
-  if (!destination || !budget || !days) {
-    alert("Please fill all fields");
+  if (!destination || isNaN(budget) || isNaN(days)) {
+    alert("Please fill all fields correctly");
     return;
   }
 
@@ -21,6 +21,9 @@ function generateTrip() {
     alert("Invalid values");
     return;
   }
+
+  // normalisation (gère fautes simples)
+  destination = normalizeDestination(destination);
 
   loader.classList.remove("hidden");
   result.classList.add("hidden");
@@ -49,6 +52,13 @@ function generateTrip() {
       "Chill in local café",
       "Mountain hiking"
     ],
+    tanger: [
+      "Explore Medina",
+      "Cap Spartel",
+      "Cafe Hafa sunset",
+      "Beach walk",
+      "Kasbah visit"
+    ],
     default: [
       "City exploration",
       "Local food tasting",
@@ -68,43 +78,57 @@ function generateTrip() {
     let shuffled = [...selectedActivities].sort(() => 0.5 - Math.random());
 
     for (let i = 1; i <= days; i++) {
-
-      // éviter répétition simple
       const activity = shuffled[i % shuffled.length];
 
-      // budget dynamique (plus réaliste)
-      const dailyBudget = Math.round((budget / days) * (0.8 + Math.random() * 0.4));
+      const dailyBudget = Math.round(
+        (budget / days) * (0.8 + Math.random() * 0.4)
+      );
 
-    output.innerHTML += `
-  <div class="trip-card">
-    <img src="${getImage(destination)}" class="trip-img">
+      output.innerHTML += `
+        <div class="trip-card">
+          <img src="${getImage(destination)}" class="trip-img">
 
-    <div class="trip-info">
-      <h3>Day ${i}</h3>
-      <p><strong>📍 ${capitalize(destination)}</strong></p>
-      <p>${activity}</p>
-      <p>💰 ${dailyBudget} DH</p>
-      <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
-    </div>
-  </div>
-`;
+          <div class="trip-info">
+            <h3>Day ${i}</h3>
+            <p><strong>📍 ${capitalize(destination)}</strong></p>
+            <p>${activity}</p>
+            <p>💰 ${dailyBudget} DH</p>
+            <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
+          </div>
+        </div>
+      `;
     }
 
-    // scroll auto vers résultats
     result.scrollIntoView({ behavior: "smooth" });
 
-  }, 1200);
+  }, 1000);
 }
 
 // ================= UTILS =================
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
+
+function normalizeDestination(dest) {
+  const map = {
+    "marrakesh": "marrakech",
+    "marrakech": "marrakech",
+    "merzouga": "merzouga",
+    "chefchaouen": "chefchaouen",
+    "chaouen": "chefchaouen",
+    "tanger": "tanger",
+    "tangier": "tanger"
+  };
+
+  return map[dest] || dest;
+}
+
 function getImage(destination) {
   const images = {
     marrakech: "https://images.unsplash.com/photo-1548013146-72479768bada",
     merzouga: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-    chefchaouen: "https://images.unsplash.com/photo-1524492449090-1f0c9d5c2b57"
+    chefchaouen: "https://images.unsplash.com/photo-1524492449090-1f0c9d5c2b57",
+    tanger: "https://images.unsplash.com/photo-1589308078054-832e3b9c8c41"
   };
 
   return images[destination] || "https://images.unsplash.com/photo-1501785888041-af3ef285b470";
