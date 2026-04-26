@@ -28,19 +28,26 @@
 </nav>
 
 <header class="hero">
-  <div class="hero-content fade-in">
+  <div class="hero-content">
     <h1>Plan your trip like a pro</h1>
     <p>Transform your budget into a perfect Moroccan adventure</p>
 
     <div class="search-box">
-      <input type="text" placeholder="Destination">
-      <input type="number" placeholder="Budget (DH)">
-      <input type="number" placeholder="Days">
+      <input id="destination" type="text" placeholder="Destination (ex: Marrakech)">
+      <input id="budget" type="number" placeholder="Budget (DH)">
+      <input id="days" type="number" placeholder="Days">
       <button onclick="generateTrip()">Generate</button>
     </div>
+
+    <div id="loader" class="loader hidden">Generating your trip...</div>
   </div>
 </header>
 
+<!-- RESULT SECTION -->
+<section id="result" class="result hidden">
+  <h2>Your AI Travel Plan</h2>
+  <div id="trip-output" class="trip-output"></div>
+</section>
 <section class="features">
   <h2 class="fade-in">Features</h2>
 
