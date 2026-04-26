@@ -11,8 +11,13 @@
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-  <h2 class="logo">Yalla Trip</h2>
+  <div class="logo-container">
+    <img src="./logo.png" alt="Yalla Trip logo">
+    <span>Yalla Trip</span>
+  </div>
+
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="features.html">Features</a></li>
@@ -23,21 +28,45 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
-  <div>
+  <div class="hero-content">
     <h1>Plan your trip like a pro</h1>
     <p>Transform your budget into a perfect Moroccan adventure</p>
-    <button class="cta">Generate my trip</button>
+
+    <div class="search-box">
+      <input type="text" placeholder="Destination">
+      <input type="number" placeholder="Budget (DH)">
+      <input type="number" placeholder="Days">
+      <button>Search</button>
+    </div>
   </div>
 </header>
 
+<!-- FEATURES -->
 <section class="features">
   <h2>Features</h2>
+
   <div class="cards">
-    <div class="card">AI Itinerary</div>
-    <div class="card">Audio Guide</div>
-    <div class="card">Booking System</div>
-    <div class="card">Interactive Map</div>
+    <div class="card">
+      <h3>AI Itinerary</h3>
+      <p>Smart travel plans based on your budget</p>
+    </div>
+
+    <div class="card">
+      <h3>Audio Guide</h3>
+      <p>Explore Morocco like a local</p>
+    </div>
+
+    <div class="card">
+      <h3>Booking System</h3>
+      <p>Hotels & activities in one place</p>
+    </div>
+
+    <div class="card">
+      <h3>Interactive Map</h3>
+      <p>Navigate easily with GPS</p>
+    </div>
   </div>
 </section>
 
