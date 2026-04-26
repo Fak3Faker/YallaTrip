@@ -212,12 +212,14 @@ footer {
 }
 
 .discover-header h2 {
-  font-size: 40px;
+  font-size: 42px;
+  font-weight: 700;
 }
 
 .discover-header p {
   max-width: 400px;
   color: #666;
+  line-height: 1.5;
 }
 
 .discover-cards {
@@ -228,6 +230,7 @@ footer {
 .discover-card {
   position: relative;
   width: 100%;
+  height: 420px;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -235,7 +238,7 @@ footer {
 
 .discover-card img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
@@ -246,18 +249,18 @@ footer {
 
 .overlay {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 25px;
+  left: 25px;
   color: white;
 }
 
 .overlay span {
   font-size: 12px;
-  letter-spacing: 1px;
+  opacity: 0.8;
 }
 
 .overlay h3 {
-  font-size: 28px;
+  font-size: 30px;
   margin-top: 5px;
 }
 /* FOOTER */
