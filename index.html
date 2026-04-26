@@ -5,16 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yalla Trip</title>
 
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
+<nav class="navbar" id="navbar">
   <div class="logo-container">
-    <img src="logo.jpeg" alt="Yalla Trip logo">
+    <img src="logo.jpeg" alt="logo">
     <span>Yalla Trip</span>
   </div>
 
@@ -28,9 +27,8 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
-  <div class="hero-content">
+  <div class="hero-content fade-in">
     <h1>Plan your trip like a pro</h1>
     <p>Transform your budget into a perfect Moroccan adventure</p>
 
@@ -38,35 +36,19 @@
       <input type="text" placeholder="Destination">
       <input type="number" placeholder="Budget (DH)">
       <input type="number" placeholder="Days">
-      <button>Search</button>
+      <button onclick="generateTrip()">Generate</button>
     </div>
   </div>
 </header>
 
-<!-- FEATURES -->
 <section class="features">
-  <h2>Features</h2>
+  <h2 class="fade-in">Features</h2>
 
   <div class="cards">
-    <div class="card">
-      <h3>AI Itinerary</h3>
-      <p>Smart travel plans based on your budget</p>
-    </div>
-
-    <div class="card">
-      <h3>Audio Guide</h3>
-      <p>Explore Morocco like a local</p>
-    </div>
-
-    <div class="card">
-      <h3>Booking System</h3>
-      <p>Hotels & activities in one place</p>
-    </div>
-
-    <div class="card">
-      <h3>Interactive Map</h3>
-      <p>Navigate easily with GPS</p>
-    </div>
+    <div class="card fade-in">AI Itinerary</div>
+    <div class="card fade-in">Audio Guide</div>
+    <div class="card fade-in">Booking System</div>
+    <div class="card fade-in">Interactive Map</div>
   </div>
 </section>
 
@@ -74,5 +56,6 @@
   <p>© 2026 Yalla Trip</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
