@@ -75,14 +75,19 @@ function generateTrip() {
       // budget dynamique (plus réaliste)
       const dailyBudget = Math.round((budget / days) * (0.8 + Math.random() * 0.4));
 
-      output.innerHTML += `
-        <div class="trip-card">
-          <h3>Day ${i}</h3>
-          <p><strong>📍 Location:</strong> ${capitalize(destination)}</p>
-          <p><strong>✨ Activity:</strong> ${activity}</p>
-          <p><strong>💰 Budget:</strong> ${dailyBudget} DH</p>
-        </div>
-      `;
+    output.innerHTML += `
+  <div class="trip-card">
+    <img src="${getImage(destination)}" class="trip-img">
+
+    <div class="trip-info">
+      <h3>Day ${i}</h3>
+      <p><strong>📍 ${capitalize(destination)}</strong></p>
+      <p>${activity}</p>
+      <p>💰 ${dailyBudget} DH</p>
+      <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
+    </div>
+  </div>
+`;
     }
 
     // scroll auto vers résultats
