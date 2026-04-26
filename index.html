@@ -2,22 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yalla Trip</title>
-
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
   <div class="logo">
-    <img src="logo.jpeg" alt="logo">
+    <img src="logo.jpeg">
     <span>Yalla Trip</span>
   </div>
 
@@ -29,81 +24,73 @@
   </ul>
 </nav>
 
-<!-- ================= HERO ================= -->
 <header class="hero">
-
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <h1>Plan your trip<br>like a pro</h1>
+    <h1>Plan your trip like a pro</h1>
     <p>Transform your budget into a perfect Moroccan adventure</p>
 
-    <!-- FORM -->
     <div class="search-box">
-      <input id="destination" type="text" placeholder="Destination">
+      <input id="destination" placeholder="Destination">
       <input id="budget" type="number" placeholder="Budget (DH)">
       <input id="days" type="number" placeholder="Days">
-
       <button onclick="generateTrip()">Generate</button>
     </div>
   </div>
 </header>
 
-<!-- ================= LOADER ================= -->
-<div id="loader" class="hidden loader">
-  Generating your trip...
-</div>
+<section class="discover">
+  <h2>Discover Morocco</h2>
 
-<!-- ================= RESULT ================= -->
-<section id="result" class="hidden result-section">
-  <h2>Your Trip Plan</h2>
+  <div class="discover-cards">
+
+    <div class="card">
+      <img src="marrakech.jpg">
+      <div class="card-text">
+        <span>Souks & Medina</span>
+        <h3>Marrakech</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="merzouga.jpg">
+      <div class="card-text">
+        <span>Sahara Desert</span>
+        <h3>Merzouga</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="chefchaouen.jpg">
+      <div class="card-text">
+        <span>Blue Pearl</span>
+        <h3>Chefchaouen</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="tanger.jpg">
+      <div class="card-text">
+        <span>Coastal City</span>
+        <h3>Tanger</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="result" class="result-section hidden">
+  <h2>Your Trip</h2>
   <div id="trip-output"></div>
 </section>
 
-<!-- ================= DISCOVER ================= -->
-<div class="discover-cards">
+<div id="loader" class="loader hidden">⏳ Generating your trip...</div>
 
-  <div class="card">
-    <img src="marrakech.jpg">
-    <div class="card-text">
-      <span>Souks & Medina</span>
-      <h3>Marrakech</h3>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="merzouga.jpg">
-    <div class="card-text">
-      <span>Sahara Desert</span>
-      <h3>Merzouga</h3>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="chefchaouen.jpg">
-    <div class="card-text">
-      <span>Blue Pearl</span>
-      <h3>Chefchaouen</h3>
-    </div>
-  </div>
-
-   <div class="card">
-  <img src="tanger.jpg">
-  <div class="card-text">
-    <span>Coastal City</span>
-    <h3>Tanger</h3>
-  </div>
-</div>
-
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
 <footer class="footer">
-
-  <div class="footer-left">
+  <div>
     <h3>Yalla Trip</h3>
-    <p>Travel smart, experience Morocco like a local.</p>
+    <p>Travel smart, explore Morocco like a local.</p>
   </div>
 
   <div class="footer-links">
@@ -115,15 +102,12 @@
 
     <div>
       <h4>Company</h4>
-      <p>Marketing</p>
       <p>Contact</p>
+      <p>hello@yallatrip.ma</p>
     </div>
   </div>
-
 </footer>
 
-<!-- ================= SCRIPT ================= -->
 <script src="script.js"></script>
-
 </body>
 </html>
