@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yalla Trip</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HERO -->
-<header class="hero">
-
-<nav class="navbar" id="navbar">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
   <div class="logo">
     <img src="logo.jpeg" alt="logo">
     <span>Yalla Trip</span>
@@ -26,45 +29,65 @@
   </ul>
 </nav>
 
+<!-- ================= HERO ================= -->
+<header class="hero">
+
+  <div class="hero-overlay"></div>
+
   <div class="hero-content">
-    <h1>Plan your trip like a pro</h1>
+    <h1>Plan your trip<br>like a pro</h1>
     <p>Transform your budget into a perfect Moroccan adventure</p>
 
+    <!-- FORM -->
     <div class="search-box">
-      <input type="text" placeholder="Destination">
-      <input type="number" placeholder="Budget (DH)">
-      <input type="number" placeholder="Days">
-      <button>Generate</button>
+      <input id="destination" type="text" placeholder="Destination">
+      <input id="budget" type="number" placeholder="Budget (DH)">
+      <input id="days" type="number" placeholder="Days">
+
+      <button onclick="generateTrip()">Generate</button>
     </div>
   </div>
-
 </header>
 
-<!-- DISCOVER -->
+<!-- ================= LOADER ================= -->
+<div id="loader" class="hidden loader">
+  Generating your trip...
+</div>
+
+<!-- ================= RESULT ================= -->
+<section id="result" class="hidden result-section">
+  <h2>Your Trip Plan</h2>
+  <div id="trip-output"></div>
+</section>
+
+<!-- ================= DISCOVER ================= -->
 <section class="discover">
   <div class="discover-header">
     <h2>Discover Morocco</h2>
-    <p>From imperial cities to desert dunes, Yalla Trip covers every kind of adventure.</p>
+    <p>From imperial cities to desert dunes</p>
   </div>
 
-  <div class="cards">
+  <div class="discover-cards">
 
-    <div class="card" style="background-image: url('marrakech.jpg')">
-      <div class="card-content">
+    <div class="card">
+      <img src="acceuil.jpeg">
+      <div class="card-text">
         <span>Souks & Medina</span>
         <h3>Marrakech</h3>
       </div>
     </div>
 
-    <div class="card" style="background-image: url('merzouga.jpg')">
-      <div class="card-content">
+    <div class="card">
+      <img src="acceuil.jpeg">
+      <div class="card-text">
         <span>Sahara Desert</span>
         <h3>Merzouga</h3>
       </div>
     </div>
 
-    <div class="card" style="background-image: url('chefchaouen.jpg')">
-      <div class="card-content">
+    <div class="card">
+      <img src="acceuil.jpeg">
+      <div class="card-text">
         <span>Blue Pearl</span>
         <h3>Chefchaouen</h3>
       </div>
@@ -73,35 +96,32 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
-  <div class="footer-container">
 
-    <div class="footer-left">
-      <h3>Yalla Trip</h3>
-      <p>Travel smart, experience Morocco like a local. AI-powered itineraries built around your budget.</p>
-    </div>
+  <div class="footer-left">
+    <h3>Yalla Trip</h3>
+    <p>Travel smart, experience Morocco like a local.</p>
+  </div>
 
-    <div class="footer-links">
+  <div class="footer-links">
+    <div>
       <h4>Product</h4>
-      <a href="#">Features</a>
-      <a href="#">Pricing</a>
-      <a href="#">Who it's for</a>
+      <p>Features</p>
+      <p>Pricing</p>
     </div>
 
-    <div class="footer-links">
+    <div>
       <h4>Company</h4>
-      <a href="#">Marketing</a>
-      <a href="#">Contact</a>
-      <a href="#">hello@yallatrip.ma</a>
+      <p>Marketing</p>
+      <p>Contact</p>
     </div>
-
   </div>
 
-  <div class="footer-bottom">
-    © 2026 Yalla Trip — Made in Morocco 🇲🇦
-  </div>
 </footer>
+
+<!-- ================= SCRIPT ================= -->
 <script src="script.js"></script>
+
 </body>
 </html>
