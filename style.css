@@ -3,23 +3,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
   background: #F8F9FA;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR GLASS ================= */
+
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  background: rgba(0,0,0,0.6);
 }
 
 .logo {
@@ -31,92 +40,103 @@ body {
 .logo img {
   width: 40px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .logo span {
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 20px;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 25px;
+  list-style: none;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-}
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  background-image: url("acceuil.jpeg");
-  background-size: cover;
-  background-position: center;
   position: relative;
 }
 
-.hero::before {
+.nav-links a::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)),
+              url("acceuil.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 120px 60px 0;
+  padding: 120px 60px;
   color: white;
   max-width: 700px;
+  animation: fadeUp 1s ease;
 }
 
 .hero h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
+  font-size: 70px;
+  font-weight: 800;
 }
 
 .hero p {
+  margin: 20px 0;
   font-size: 18px;
-  margin-bottom: 30px;
 }
 
-/* SEARCH */
+/* ================= SEARCH ================= */
+
 .search-box {
   display: flex;
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  width: fit-content;
+  margin-top: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
 .search-box input {
   border: none;
-  padding: 15px;
-  width: 180px;
+  padding: 18px;
+  width: 200px;
 }
 
 .search-box button {
   background: #C44536;
   color: white;
   border: none;
-  padding: 0 25px;
+  padding: 0 30px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-/* DISCOVER */
+.search-box button:hover {
+  background: #a3362a;
+}
+
+/* ================= DISCOVER ================= */
+
 .discover {
-  padding: 80px 60px;
+  padding: 100px 60px;
 }
 
 .discover-header {
@@ -132,65 +152,76 @@ body {
 
 .card {
   flex: 1;
-  height: 350px;
+  height: 380px;
   border-radius: 20px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
   overflow: hidden;
+  position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: translateY(-10px) scale(1.02);
 }
 
 .card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
 }
 
 .card-content {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 25px;
+  left: 25px;
   color: white;
-}
-
-.card-content span {
-  font-size: 12px;
 }
 
 .card-content h3 {
-  font-size: 26px;
+  font-size: 28px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 .footer {
-  background: #2b1b17;
+  background: linear-gradient(135deg, #2b1b17, #3b2a25);
   color: white;
-  padding: 60px;
+  padding: 80px 60px;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 .footer-links a {
   display: block;
   margin: 8px 0;
   color: white;
-  text-decoration: none;
   opacity: 0.8;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  opacity: 1;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding-top: 20px;
+  margin-top: 40px;
   font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
