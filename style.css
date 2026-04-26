@@ -103,14 +103,13 @@ body {
   width: 100%;
 }
 
-.search-box input {
-  flex: 1;
-  padding: 15px;
-  border: none;
-  outline: none;
-  min-width: 0; /* IMPORTANT pour éviter overflow */
+.search-box input:nth-child(1) {
+  border-right: 1px solid #eee;
 }
 
+.search-box input:nth-child(2) {
+  border-right: 1px solid #eee;
+}
 .search-box button {
   background: #d35400;
   color: white;
