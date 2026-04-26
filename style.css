@@ -198,3 +198,119 @@ footer {
   transform: scale(1.05);
   background: #a83228;
 }
+
+/* DISCOVER */
+.discover {
+  padding: 80px 60px;
+}
+
+.discover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.discover-header h2 {
+  font-size: 40px;
+}
+
+.discover-header p {
+  max-width: 400px;
+  color: #666;
+}
+
+.discover-cards {
+  display: flex;
+  gap: 25px;
+}
+
+.discover-card {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.discover-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.discover-card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.overlay span {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.overlay h3 {
+  font-size: 28px;
+  margin-top: 5px;
+}
+/* FOOTER */
+.footer {
+  background: linear-gradient(180deg, #3b1f1a, #2a140f);
+  color: white;
+  padding: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left {
+  max-width: 400px;
+}
+
+.footer-left h2 {
+  margin-bottom: 15px;
+}
+
+.socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.socials span {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  text-align: center;
+  color: #aaa;
+}
