@@ -14,20 +14,43 @@ body {
 
 /* NAVBAR */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 20px 60px;
   background: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
-.logo {
+body {
+  padding-top: 80px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.logo-container span {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   color: #C44536;
 }
 
+/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 25px;
@@ -47,13 +70,13 @@ body {
 
 /* HERO */
 .hero {
-  height: 85vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
   url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70');
 
   background-size: cover;
@@ -71,32 +94,38 @@ body {
   font-size: 18px;
 }
 
-/* BUTTON */
-.cta {
-  margin-top: 25px;
-  padding: 14px 30px;
-  border-radius: 30px;
-  background: #2E7D32;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
+/* SEARCH BOX */
+.search-box {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.cta:hover {
-  background: #1b5e20;
-  transform: translateY(-3px);
+.search-box input {
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #f1f1f1;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  border: none;
+  background: #C44536;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 /* FEATURES */
 .features {
   padding: 80px 40px;
   text-align: center;
-}
-
-.features h2 {
-  font-size: 32px;
 }
 
 .cards {
@@ -111,9 +140,14 @@ body {
   background: white;
   padding: 30px;
   border-radius: 15px;
-  width: 220px;
+  width: 240px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   transition: 0.3s;
+  text-align: left;
+}
+
+.card h3 {
+  margin-bottom: 10px;
 }
 
 .card:hover {
@@ -125,21 +159,4 @@ footer {
   text-align: center;
   padding: 30px;
   color: #777;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
 }
