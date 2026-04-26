@@ -27,8 +27,8 @@
 .logo img {
   width: 40px;
   height: 40px;
+  border-radius: 50%; /* rond */
   object-fit: cover;
-  border-radius: 8px; /* arrondi */
 }
 
 .logo span {
