@@ -247,3 +247,13 @@ body {
 .trip-info {
   padding: 15px;
 }
+.hidden {
+  display: none;
+}
+
+#trip-output {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
