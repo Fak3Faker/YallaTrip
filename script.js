@@ -113,8 +113,8 @@ function generateTrip() {
             <h3>Day ${i}</h3>
             <p><strong>📍 ${capitalize(destination)}</strong></p>
 
-            <p class="morning">🌅 09:00 — ${morning}</p>
-            <p class="evening">🌙 18:00 — ${evening}</p>
+            <p class="morning"> 09:00 — ${morning}</p>
+            <p class="evening"> 18:00 — ${evening}</p>
 
             <p>💰 ${dailyBudget} DH</p>
             <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
@@ -139,21 +139,21 @@ function getImage(activity) {
   const images = {
 
     // ===== MARRAKECH =====
-    "Visit Jemaa el-Fnaa": "https://images.unsplash.com/photo-1548013146-72479768bada",
-    "Explore souks": "https://images.unsplash.com/photo-1597211833712-6c7b3d0d83d4",
-    "Luxury Hammam experience": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
-    "Atlas Mountains day trip": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
-    "Traditional Moroccan dinner": "https://images.unsplash.com/photo-1543353071-087092ec393a",
-    "Majorelle Garden visit": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    "Hot air balloon ride": "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92",
-    "Cooking class": "https://images.unsplash.com/photo-1498837167922-ddd27525d352",
-    "Camel ride in Palmeraie": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-    "Spa & massage": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874",
-    "Street food tour": "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
-    "Rooftop sunset café": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
-    "Local market visit": "https://images.unsplash.com/photo-1519181245277-cffeb31da2e3",
-    "Museum Dar Si Said": "https://images.unsplash.com/photo-1565060169194-19fabf630c09",
-    "Quad biking experience": "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+    "Visit Jemaa el-Fnaa": "https://dunesdeserts.com/wp-content/uploads/2019/01/Jmaalefna.jpg",
+    "Explore souks": "https://www.voyage-maroc.com/cdn/ma-public/souk-MAX-w1000h600.jpg",
+    "Luxury Hammam experience": "https://www.hammamdelarose.com/storage/2021/06/Copia-di-medres_elanhotelpix_hammamrose_0308-840x473.jpg",
+    "Atlas Mountains day trip": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/07/13.jpg",
+    "Traditional Moroccan dinner": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f9/d7/72.jpg",
+    "Majorelle Garden visit": "https://cdn-imgix.headout.com/media/images/6bb9d134-9c87-4205-ae22-26b2ac5524f3-1761031220369-320757.jpg?w=1041.6000000000001&h=651&crop=faces&auto=compress%2Cformat&fit=min",
+    "Hot air balloon ride": "https://www.cieldafrique.info/theme/assets/img/ballooningmarrakech.jpg",
+    "Cooking class": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/d8/76.jpg",
+    "Camel ride in Palmeraie": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/37/fd/05.jpg",
+    "Spa & massage": "https://d397xw3titc834.cloudfront.net/images/original/d/b8/db8e6eae84d56142eb5084516b3387fe.jpg",
+    "Street food tour": "https://www.cenizaro.com/images/marrakech/street-food-tour-thumbnail.jpg",
+    "Rooftop sunset café": "https://www.rooftopdardar.com/uploads/posts/sunset-rooftop-bar-in-marrakech_1688927240.jpg",
+    "Local market visit": "https://www.marrakechsunset.com/images/blog/what_should_i_buy_in_marrakech_medina.jpg",
+    "Museum Dar Si Said": "https://fnm.ma/wp-content/uploads/2021/12/dar-si-said-slide6.jpg",
+    "Quad biking experience": "https://mltfiawdjzzw.i.optimole.com/w:1200/h:768/q:mauto/f:best/https://volcanoexperience.ma/wp-content/uploads/2025/09/Add-a-heading-8.png",
 
     // ===== MERZOUGA =====
     "Camel trekking": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
