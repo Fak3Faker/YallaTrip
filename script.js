@@ -301,19 +301,19 @@ function prevActivity(btn) {
 // ================= COOKIES =================
 
 window.onload = function () {
-  const banner = document.getElementById("cookieBanner");
+  const banner = document.getElementById("cookie-popup");
 
   if (!localStorage.getItem("cookiesChoice")) {
-    banner.style.display = "block";
+    banner.classList.remove("hidden");
   }
 };
 
 function acceptCookies() {
   localStorage.setItem("cookiesChoice", "accepted");
-  document.getElementById("cookieBanner").style.display = "none";
+  document.getElementById("cookie-popup").classList.add("hidden");
 }
 
-function refuseCookies() {
+function declineCookies() {
   localStorage.setItem("cookiesChoice", "refused");
-  document.getElementById("cookieBanner").style.display = "none";
+  document.getElementById("cookie-popup").classList.add("hidden");
 }
