@@ -60,7 +60,7 @@ output.innerHTML = "";
       "Relaxation","Shopping tour","Museum visit",
       "Guided walking tour","Street food experience","Local café break",
       "Sunset viewpoint","Photography walk","Market visit",
-      "Nature escape","Historical monument visit",
+      "Nature escape.","Historical monument visit",
       "Evening restaurant experience"
     ]
   };
@@ -198,21 +198,21 @@ function getImage(activity) {
     "Hidden streets exploration": "https://www.takemetotravel.com/wp-content/uploads/2024/02/Exploring-the-Blue-Streets-of-Chefchaouen-.webp",
 
     // ===== TANGER =====
-    "Explore Medina": "https://images.unsplash.com/photo-1565060169194-19fabf630c09",
-    "Cap Spartel": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    "Cafe Hafa sunset": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9",
-    "Beach walk": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    "Kasbah visit": "https://images.unsplash.com/photo-1565060169194-19fabf630c09",
-    "Hercules caves": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
-    "Corniche walk": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    "Local seafood restaurant": "https://images.unsplash.com/photo-1553621042-f6e147245754",
-    "Museum visit": "https://images.unsplash.com/photo-1565060169194-19fabf630c09",
-    "Sunset viewpoin Tanger": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429",
-    "Boat experience": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
-    "Old port visit": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
-    "Street art exploration": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-    "Shopping in souk": "https://images.unsplash.com/photo-1597211833712-6c7b3d0d83d4",
-    "Coffee with ocean view": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+    "Explore Medina": "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/de/80/c5.jpg",
+    "Cap Spartel": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Lighthouse_after_renovation.jpg",
+    "Cafe Hafa sunset": "https://media-cdn.tripadvisor.com/media/photo-s/12/dd/99/f7/img-largejpg.jpg",
+    "Beach walk": "https://beaches-searcher.com/images/beaches/504201101/504201101.jpg",
+    "Kasbah visit": "https://cdn.generationvoyage.fr/2025/04/La-Kasbah-de-Tanger-Maroc.jpeg",
+    "Hercules caves": "https://d3lq8p6p6r1qxf.cloudfront.net/1616536765164.png",
+    "Corniche walk": "https://en.bladi.net/img/logo/tangiers-corniche-makeover-boosts-tourism-clears-illegal-vendors-57836.jpg",
+    "Local seafood restaurant": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/65/d7/54/photo7jpg.jpg",
+    "Museum visit": "https://www.vanupied.com/wp-content/uploads/tanger-musee-ibn-batouta.jpg",
+    "Sunset viewpoin Tanger": "https://img.flytrippers.com/img/cities/tng_ban.jpg",
+    "Boat experience": "https://cdn.samboat.fr/announcements-v2/67efdee977530-o.webp",
+    "Old port visit": "https://d3lq8p6p6r1qxf.cloudfront.net/1601839128727.jpg",
+    "Street art exploration": "https://www.kathmanduandbeyond.com/wp-content/uploads/2017/03/Medina-Tangier-Morocco-8-Edit.jpg",
+    "Shopping in souk": "https://www.barcelo.com/guia-turismo/wp-content/uploads/2022/02/zoco-tanger-888.jpg",
+    "Coffee with ocean view": "https://www.lostinthesouk.com/en/wp-content/uploads/2024/06/IMG_3696.jpg",
 
     // ===== DEFAULT =====
     "City exploration": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
@@ -225,7 +225,7 @@ function getImage(activity) {
     "Local café break": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
     "Photography walk": "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
     "Market visit": "https://images.unsplash.com/photo-1519181245277-cffeb31da2e3",
-    "Nature escape": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    "Nature escape.": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
     "Historical monument visit": "https://images.unsplash.com/photo-1565060169194-19fabf630c09",
     "Evening restaurant experience": "https://images.unsplash.com/photo-1543353071-087092ec393a"
   };
