@@ -1079,12 +1079,19 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  padding: 8px 12px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
   cursor: pointer;
-  font-size: 18px;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.trip-img-container:hover .arrow {
+  opacity: 1;
 }
 
 .arrow.left {
@@ -1093,4 +1100,23 @@ body {
 
 .arrow.right {
   right: 10px;
+}
+
+.arrow::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: solid white;
+  border-width: 2px 2px 0 0;
+  margin: auto;
+  transform: rotate(45deg);
+}
+
+.arrow.left::before {
+  transform: rotate(-135deg);
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.6);
 }
