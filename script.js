@@ -72,7 +72,8 @@ output.innerHTML = "";
 
   return !(
     text.includes("sunset") ||
-    text.includes("dinner")
+    text.includes("dinner") ||
+    text.includes("night")
   );
 });
 
