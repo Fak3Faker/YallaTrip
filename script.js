@@ -67,30 +67,16 @@ output.innerHTML = "";
 
   // 👉 IMPORTANT
   const selectedActivities = activities[destination] || activities["default"];
-  const dayActivities = selectedActivities.filter(a => {
+ const dayActivities = selectedActivities.filter(a => {
   const text = a.toLowerCase();
+
   return !(
     text.includes("sunset") ||
-    text.includes("night") ||
-    text.includes("cafe") ||
-    text.includes("rooftop") ||
-    text.includes("dinner") ||
-    text.includes("restaurant")
+    text.includes("dinner")
   );
 });
 
-const nightActivities = selectedActivities.filter(a => {
-  const text = a.toLowerCase();
-  return (
-    text.includes("sunset") ||
-    text.includes("night") ||
-    text.includes("cafe") ||
-    text.includes("rooftop") ||
-    text.includes("dinner") ||
-    text.includes("restaurant")
-  );
-});
-
+const nightActivities = selectedActivities; // 🔥 pas de filtre → tout autorisé le soir
   
 
   if (!activities[destination]) {
@@ -121,13 +107,12 @@ const nightActivities = selectedActivities.filter(a => {
 
     for (let i = 1; i <= days; i++) {
 
-      const morning = getUniqueActivity(
+   const morning = getUniqueActivity(
   dayActivities.length ? dayActivities : selectedActivities
 );
 
-const evening = getUniqueActivity(
-  nightActivities.length ? nightActivities : selectedActivities
-);
+const evening = getUniqueActivity(selectedActivities);
+      
       const dailyBudget = Math.round(
         (budget / days) * (0.8 + Math.random() * 0.4)
       );
