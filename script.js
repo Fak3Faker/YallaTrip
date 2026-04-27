@@ -86,7 +86,7 @@ function generateTrip() {
 
       output.innerHTML += `
         <div class="trip-card">
-          <img src="${getImage(destination)}" class="trip-img">
+         <img src="${getImage(activity)}" class="trip-img">
 
           <div class="trip-info">
             <h3>Day ${i}</h3>
