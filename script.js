@@ -298,3 +298,22 @@ function prevActivity(btn) {
     img.classList.add("fade-in");
   }, 200);
 }
+// ================= COOKIES =================
+
+window.onload = function () {
+  const banner = document.getElementById("cookieBanner");
+
+  if (!localStorage.getItem("cookiesChoice")) {
+    banner.style.display = "block";
+  }
+};
+
+function acceptCookies() {
+  localStorage.setItem("cookiesChoice", "accepted");
+  document.getElementById("cookieBanner").style.display = "none";
+}
+
+function refuseCookies() {
+  localStorage.setItem("cookiesChoice", "refused");
+  document.getElementById("cookieBanner").style.display = "none";
+}
