@@ -194,25 +194,52 @@ body {
 }
 
 /* ================= DISCOVER ================= */
+/* ================= DISCOVER ================= */
 .discover {
-  padding: 100px 40px;
-  margin-top: 60px;
   position: relative;
+  overflow: hidden;
+  padding: 100px 0;
 }
 
+/* title */
 .discover h2 {
-  font-size: 42px;
-  margin-bottom: 50px;
+  font-size: 44px;
   font-weight: 700;
+  margin-left: 40px;
+  margin-bottom: 50px;
+}
+
+/* fade edges */
+.discover::before,
+.discover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.discover::before {
+  left: 0;
+  background: linear-gradient(to right, #f5f5f5 20%, transparent);
+}
+
+.discover::after {
+  right: 0;
+  background: linear-gradient(to left, #f5f5f5 20%, transparent);
 }
 
 /* container */
 .discover-cards {
   display: flex;
-  gap: 25px;
+  gap: 24px;
+  padding: 0 40px;
+
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 10px;
+  scroll-behavior: smooth;
 }
 
 .discover-cards::-webkit-scrollbar {
@@ -222,14 +249,18 @@ body {
 /* card */
 .card {
   min-width: 300px;
-  height: 400px;
-  border-radius: 22px;
+  max-width: 300px;
+  height: 420px;
+
+  border-radius: 24px;
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
-  scroll-snap-align: start;
+
+  scroll-snap-align: center;
+
   transition: all 0.4s ease;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 }
 
 /* image */
@@ -237,18 +268,18 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
 }
 
-/* overlay premium */
+/* overlay */
 .card::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.3),
     transparent
   );
   transition: 0.4s;
@@ -257,40 +288,50 @@ body {
 /* text */
 .card-text {
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   left: 25px;
-  color: white;
   z-index: 2;
+  color: white;
 }
 
 .card-text span {
-  font-size: 13px;
-  opacity: 0.85;
-  letter-spacing: 1px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  opacity: 0.8;
 }
 
 .card-text h3 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
-/* hover effect */
+/* hover premium */
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
 }
 
 .card:hover img {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 .card:hover::after {
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.85),
-    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.4),
     transparent
   );
+}
+
+/* focus center (ultra premium) */
+.card:not(:hover) {
+  opacity: 0.85;
+}
+
+.discover-cards {
+  cursor: grab;
 }
 /* ================= FOOTER ================= */
 /* ================= FOOTER PREMIUM ================= */
