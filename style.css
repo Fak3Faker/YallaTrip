@@ -1080,38 +1080,45 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.25);
-  backdrop-filter: blur(6px);
+
+  background: rgba(0, 0, 0, 0.18); /* 🔥 plus léger */
+  backdrop-filter: blur(10px);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   cursor: pointer;
-  transition: 0.25s;
+  transition: all 0.25s ease;
+
   opacity: 0;
 }
 
-/* apparition hover */
+/* apparition douce */
 .trip-img-container:hover .arrow {
   opacity: 1;
 }
 
 /* position */
-.arrow.left { left: 10px; }
-.arrow.right { right: 10px; }
+.arrow.left { left: 12px; }
+.arrow.right { right: 12px; }
 
-/* flèche dessinée */
+/* flèche ULTRA CLEAN */
 .arrow::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
+
   border-right: 2px solid white;
   border-top: 2px solid white;
-  transform-origin: center;
+
+  opacity: 0.9;
 }
 
+/* direction */
 .arrow.left::before {
   transform: rotate(-135deg);
 }
@@ -1120,12 +1127,13 @@ body {
   transform: rotate(45deg);
 }
 
-/* hover */
+/* hover premium */
 .arrow:hover {
-  background: rgba(0,0,0,0.45);
-  transform: translateY(-50%) scale(1.1);
+  background: rgba(0, 0, 0, 0.35);
+  transform: translateY(-50%) scale(1.08);
 }
 
-.arrow {
-  font-size: 0; /* 🔥 empêche tout texte caché */
+/* click feedback (ultra important) */
+.arrow:active {
+  transform: translateY(-50%) scale(0.95);
 }
