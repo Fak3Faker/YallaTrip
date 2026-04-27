@@ -67,13 +67,30 @@ output.innerHTML = "";
 
   // 👉 IMPORTANT
   const selectedActivities = activities[destination] || activities["default"];
-  const morning = getUniqueActivity(
-  dayActivities.length ? dayActivities : selectedActivities
-);
+  const dayActivities = selectedActivities.filter(a => {
+  const text = a.toLowerCase();
+  return !(
+    text.includes("sunset") ||
+    text.includes("night") ||
+    text.includes("cafe") ||
+    text.includes("rooftop") ||
+    text.includes("dinner") ||
+    text.includes("restaurant")
+  );
+});
 
-const evening = getUniqueActivity(
-  nightActivities.length ? nightActivities : selectedActivities
-);
+const nightActivities = selectedActivities.filter(a => {
+  const text = a.toLowerCase();
+  return (
+    text.includes("sunset") ||
+    text.includes("night") ||
+    text.includes("cafe") ||
+    text.includes("rooftop") ||
+    text.includes("dinner") ||
+    text.includes("restaurant")
+  );
+});
+
   
 
   if (!activities[destination]) {
