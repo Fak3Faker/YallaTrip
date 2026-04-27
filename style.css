@@ -1062,3 +1062,12 @@ body {
 .evening {
   color: #2c3e50;
 }
+.activity-text.hidden {
+  display: none;
+}
+
+.switch-btn {
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 18px;
+}
