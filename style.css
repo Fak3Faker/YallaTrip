@@ -754,3 +754,62 @@ body {
     height: 200px;
   }
 }
+/* ================= PAYMENT ================= */
+.payment-body {
+  background: linear-gradient(135deg, #f5f5f5, #eee);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-container {
+  width: 400px;
+  text-align: center;
+}
+
+.payment-sub {
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.payment-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* inputs */
+.payment-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* row */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row div {
+  flex: 1;
+}
+
+/* button */
+.pay-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #d35400, #ff7a18);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
