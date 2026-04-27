@@ -50,7 +50,7 @@ output.innerHTML = "";
     tanger: [
       "Explore Medina","Cap Spartel","Cafe Hafa sunset","Beach walk",
       "Kasbah visit","Hercules caves","Corniche walk",
-      "Local seafood restaurant","Museum visit","Sunset viewpoint Tanger",
+      "Local seafood restaurant","Museum visit","Sunset Tanger",
       "Boat experience","Old port visit","Street art exploration",
       "Shopping in souk","Coffee with ocean view"
     ],
@@ -207,7 +207,7 @@ function getImage(activity) {
     "Corniche walk": "https://en.bladi.net/img/logo/tangiers-corniche-makeover-boosts-tourism-clears-illegal-vendors-57836.jpg",
     "Local seafood restaurant": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/65/d7/54/photo7jpg.jpg",
     "Museum visit": "https://www.vanupied.com/wp-content/uploads/tanger-musee-ibn-batouta.jpg",
-    "Sunset viewpoin Tanger": "https://img.flytrippers.com/img/cities/tng_ban.jpg",
+    "Sunset Tanger": "https://img.flytrippers.com/img/cities/tng_ban.jpg",
     "Boat experience": "https://cdn.samboat.fr/announcements-v2/67efdee977530-o.webp",
     "Old port visit": "https://d3lq8p6p6r1qxf.cloudfront.net/1601839128727.jpg",
     "Street art exploration": "https://www.kathmanduandbeyond.com/wp-content/uploads/2017/03/Medina-Tangier-Morocco-8-Edit.jpg",
