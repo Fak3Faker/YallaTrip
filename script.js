@@ -25,8 +25,7 @@ output.innerHTML = "";
   const activities = {
     marrakech: [
       "Visit Jemaa el-Fnaa","Explore souks","Luxury Hammam experience",
-      "Atlas Mountains day trip","Traditional Moroccan dinner",
-      "Majorelle Garden visit","Hot air balloon ride","Cooking class",
+      "Atlas Mountains day trip","Majorelle Garden visit","Hot air balloon ride","Cooking class",
       "Camel ride in Palmeraie","Spa & massage","Street food tour",
       "Rooftop sunset café","Local market visit","Museum Dar Si Said",
       "Quad biking experience"
@@ -154,7 +153,6 @@ function getImage(activity) {
     "Explore souks": "https://www.voyage-maroc.com/cdn/ma-public/souk-MAX-w1000h600.jpg",
     "Luxury Hammam experience": "https://www.hammamdelarose.com/storage/2021/06/Copia-di-medres_elanhotelpix_hammamrose_0308-840x473.jpg",
     "Atlas Mountains day trip": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/70/07/13.jpg",
-    "Traditional Moroccan dinner": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/f9/d7/72.jpg",
     "Majorelle Garden visit": "https://cdn-imgix.headout.com/media/images/6bb9d134-9c87-4205-ae22-26b2ac5524f3-1761031220369-320757.jpg?w=1041.6000000000001&h=651&crop=faces&auto=compress%2Cformat&fit=min",
     "Hot air balloon ride": "https://www.cieldafrique.info/theme/assets/img/ballooningmarrakech.jpg",
     "Cooking class": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/d8/76.jpg",
