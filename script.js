@@ -94,9 +94,8 @@ function getUniqueActivity(list) {
         shuffled = [...selectedActivities].sort(() => 0.5 - Math.random());
       }
 
-      const morning = shuffled[(i * 2) % shuffled.length];
-      const evening = shuffled[(i * 2 + 1) % shuffled.length];
-
+      const morning = getUniqueActivity(selectedActivities);
+      const evening = getUniqueActivity(selectedActivities);
       const dailyBudget = Math.round(
         (budget / days) * (0.8 + Math.random() * 0.4)
       );
