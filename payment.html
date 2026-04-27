@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment - Yalla Trip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="payment-body">
+
+<div class="payment-container">
+
+  <h1>Complete your payment</h1>
+  <p class="payment-sub">Premium plan • 25–30 DH/day</p>
+
+  <div class="payment-card">
+
+    <label>Card Number</label>
+    <input type="text" placeholder="1234 5678 9012 3456">
+
+    <div class="row">
+      <div>
+        <label>Expiry</label>
+        <input type="text" placeholder="MM/YY">
+      </div>
+
+      <div>
+        <label>CVC</label>
+        <input type="text" placeholder="123">
+      </div>
+    </div>
+
+    <label>Name on card</label>
+    <input type="text" placeholder="Your name">
+
+    <button class="pay-btn" onclick="fakePayment()">Pay now</button>
+
+  </div>
+
+</div>
+
+<script>
+function fakePayment() {
+  alert("✅ Payment successful! Welcome to Premium");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
