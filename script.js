@@ -65,8 +65,22 @@ function generateTrip() {
     ]
   };
 
-  let selectedActivities = activities[destination] || activities["default"];
-  let shuffled = [...selectedActivities].sort(() => 0.5 - Math.random());
+ let usedActivities = [];
+
+function getUniqueActivity(list) {
+  let remaining = list.filter(a => !usedActivities.includes(a));
+
+  // si on a tout utilisé → reset
+  if (remaining.length === 0) {
+    usedActivities = [];
+    remaining = list;
+  }
+
+  const random = remaining[Math.floor(Math.random() * remaining.length)];
+  usedActivities.push(random);
+
+  return random;
+}
 
   // ================= GENERATION =================
   setTimeout(() => {
