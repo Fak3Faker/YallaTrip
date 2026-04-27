@@ -1,28 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Pricing</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <title>Pricing - Yalla Trip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-  <h2 class="logo">Yalla Trip</h2>
+  <div class="logo">
+    <img src="logo.jpeg">
+    <span>Yalla Trip</span>
+  </div>
+
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="features.html">Features</a></li>
     <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="persona.html">Persona</a></li>
-    <li><a href="marketing.html">Marketing</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<section class="features">
-  <h1>Features</h1>
-  <p>AI Trip Generator, Smart Guide, Chatbot, Booking system...</p>
+<!-- SECTION -->
+<section class="pricing">
+
+  <h1>Choose your plan</h1>
+
+  <div class="pricing-container">
+
+    <!-- FREE -->
+    <div class="pricing-card free">
+      <h2>Free</h2>
+      <p class="desc">Discover the basics of Yalla Trip.</p>
+
+      <div class="price">0 <span>DH / forever</span></div>
+
+      <ul>
+        <li>✔ Limited itinerary (3 days max)</li>
+        <li>✔ Basic text guide</li>
+        <li>✔ Interactive map</li>
+        <li class="off">✖ Full audio guide</li>
+        <li class="off">✖ Offline mode</li>
+        <li class="off">✖ Personalization</li>
+      </ul>
+
+      <button class="btn free-btn">Start free</button>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="pricing-card premium">
+
+      <div class="badge">👑 MOST POPULAR</div>
+
+      <h2>Premium</h2>
+      <p class="desc">The full Moroccan adventure.</p>
+
+      <div class="price">25–30 <span>DH / day</span></div>
+
+      <ul>
+        <li>✔ Unlimited itinerary length</li>
+        <li>✔ Full audio guide (6 languages)</li>
+        <li>✔ Offline mode</li>
+        <li>✔ No ads</li>
+        <li>✔ AI personalization</li>
+        <li>✔ Priority support</li>
+      </ul>
+
+      <button class="btn premium-btn">Go premium</button>
+    </div>
+
+  </div>
+
 </section>
 
 </body>
