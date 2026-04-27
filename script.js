@@ -107,13 +107,19 @@ output.innerHTML = "";
      output.innerHTML += `
   <div class="trip-card">
 
-    <div class="trip-img-container">
-      <img src="${getImage(morning)}" class="trip-img">
+   <div class="trip-img-container">
+  <img src="${getImage(morning)}" class="trip-img">
 
-      <button class="arrow left" onclick="switchActivity(this, 'morning')"></button>
-      <button class="arrow right" onclick="switchActivity(this, 'evening')"></button>
-    </div>
+  <div class="arrow left" onclick="prevActivity(this)">❮</div>
+  <div class="arrow right" onclick="nextActivity(this)">❯</div>
+</div>
 
+<div class="trip-info">
+  <p class="activity-text"> 09:00 — ${morning}</p>
+
+  <span class="morning-data hidden">${morning}</span>
+  <span class="evening-data hidden">${evening}</span>
+</div>
     <div class="trip-info">
       <h3>Day ${i}</h3>
       <p><strong>📍 ${capitalize(destination)}</strong></p>
@@ -247,4 +253,25 @@ function toggleActivity(btn) {
   const activities = card.querySelectorAll(".activity-text");
 
   activities.forEach(el => el.classList.toggle("hidden"));
+}
+function nextActivity(btn) {
+  const card = btn.closest(".trip-card");
+
+  const text = card.querySelector(".activity-text");
+  const img = card.querySelector(".trip-img");
+  const evening = card.querySelector(".evening-data").textContent;
+
+  text.textContent = "🌙 18:00 — " + evening;
+  img.src = getImage(evening);
+}
+
+function prevActivity(btn) {
+  const card = btn.closest(".trip-card");
+
+  const text = card.querySelector(".activity-text");
+  const img = card.querySelector(".trip-img");
+  const morning = card.querySelector(".morning-data").textContent;
+
+  text.textContent = " 09:00 — " + morning;
+  img.src = getImage(morning);
 }
