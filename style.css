@@ -198,7 +198,9 @@ body {
 .discover {
   position: relative;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 100px 20px; /* 🔥 moins de marge */
+  max-width: 1400px; /* 🔥 agrandit */
+  margin: auto; /* centre */
 }
 
 /* title */
@@ -234,12 +236,8 @@ body {
 /* container */
 .discover-cards {
   display: flex;
-  gap: 24px;
-  padding: 0 40px;
-
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  gap: 30px; /* 🔥 plus d'espace */
+  padding: 0 10px;
 }
 
 .discover-cards::-webkit-scrollbar {
