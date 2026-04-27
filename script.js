@@ -30,43 +30,58 @@ function generateTrip() {
   output.innerHTML = "";
 
   // ================= DATABASE =================
-  const activities = {
-    marrakech: [
-      "Visit Jemaa el-Fnaa",
-      "Explore souks",
-      "Luxury Hammam experience",
-      "Atlas Mountains day trip",
-      "Traditional Moroccan dinner"
-    ],
-    merzouga: [
-      "Camel trekking",
-      "Luxury desert camp",
-      "Sunset dunes",
-      "4x4 desert adventure",
-      "Stargazing night"
-    ],
-    chefchaouen: [
-      "Explore blue streets",
-      "Ras El Maa waterfall",
-      "Photography tour",
-      "Chill in local café",
-      "Mountain hiking"
-    ],
-    tanger: [
-      "Explore Medina",
-      "Cap Spartel",
-      "Cafe Hafa sunset",
-      "Beach walk",
-      "Kasbah visit"
-    ],
-    default: [
-      "City exploration",
-      "Local food tasting",
-      "Cultural visit",
-      "Relaxation",
-      "Shopping"
-    ]
-  };
+const activities = {
+
+  marrakech: [
+    "Visit Jemaa el-Fnaa",
+    "Explore souks",
+    "Luxury Hammam experience",
+    "Atlas Mountains day trip",
+    "Traditional Moroccan dinner",
+    "Majorelle Garden visit",
+    "Hot air balloon ride"
+  ],
+
+  merzouga: [
+    "Camel trekking",
+    "Luxury desert camp",
+    "Sunset dunes",
+    "4x4 desert adventure",
+    "Stargazing night",
+    "Sandboarding",
+    "Desert sunrise"
+  ],
+
+  chefchaouen: [
+    "Explore blue streets",
+    "Ras El Maa waterfall",
+    "Photography tour",
+    "Chill in local café",
+    "Mountain hiking",
+    "Sunset viewpoint",
+    "Local artisan visit"
+  ],
+
+  tanger: [
+    "Explore Medina",
+    "Cap Spartel",
+    "Cafe Hafa sunset",
+    "Beach walk",
+    "Kasbah visit",
+    "Hercules caves",
+    "Corniche walk"
+  ],
+
+  default: [
+    "City exploration",
+    "Local food tasting",
+    "Cultural visit",
+    "Relaxation",
+    "Shopping",
+    "Guided tour",
+    "Museum visit"
+  ]
+};
 
   const selectedActivities = activities[destination] || activities["default"];
 
