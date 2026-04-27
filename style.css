@@ -892,3 +892,43 @@ body {
     flex-direction: column;
   }
 }
+/* ================= TOP APP BAR ================= */
+.top-app-bar {
+  width: 100%;
+  background: linear-gradient(135deg, #d35400, #ff7a18);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  font-size: 14px;
+  z-index: 2000;
+}
+
+/* buttons */
+.top-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.top-buttons button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .top-app-bar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+.navbar {
+  top: 50px;
+}
