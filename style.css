@@ -1054,3 +1054,11 @@ body {
     transform: translateX(-50%);
   }
 }
+.morning {
+  color: #d35400;
+  font-weight: 600;
+}
+
+.evening {
+  color: #2c3e50;
+}
