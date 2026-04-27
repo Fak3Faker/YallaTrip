@@ -1105,13 +1105,13 @@ body {
 /* flèche dessinée */
 .arrow::before {
   content: "";
-  width: 7px;
-  height: 7px;
-  border: solid white;
-  border-width: 2px 2px 0 0;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  transform-origin: center;
 }
 
-/* orientation */
 .arrow.left::before {
   transform: rotate(-135deg);
 }
@@ -1124,4 +1124,8 @@ body {
 .arrow:hover {
   background: rgba(0,0,0,0.45);
   transform: translateY(-50%) scale(1.1);
+}
+
+.arrow {
+  font-size: 0; /* 🔥 empêche tout texte caché */
 }
