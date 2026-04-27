@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <title>Contact - Yalla Trip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
-  <h2 class="logo">Yalla Trip</h2>
+  <div class="logo">
+    <img src="logo.jpeg">
+    <span>Yalla Trip</span>
+  </div>
+
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="features.html">Features</a></li>
     <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="persona.html">Persona</a></li>
-    <li><a href="marketing.html">Marketing</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<section class="features">
-  <h1>Features</h1>
-  <p>AI Trip Generator, Smart Guide, Chatbot, Booking system...</p>
+<!-- SECTION -->
+<section class="contact">
+
+  <div class="contact-container">
+
+    <!-- LEFT -->
+    <div class="contact-info">
+      <h1>Get in touch</h1>
+      <p>We’d love to help you plan your perfect Moroccan trip.</p>
+
+      <div class="contact-details">
+        <p>📍 Morocco</p>
+        <p>📧 hello@yallatrip.ma</p>
+        <p>📞 +212 6 60 21 92 19</p>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-form">
+
+      <input type="text" placeholder="Your name">
+      <input type="email" placeholder="Your email">
+      <textarea placeholder="Your message"></textarea>
+
+      <button onclick="sendMessage()">Send message</button>
+
+    </div>
+
+  </div>
+
 </section>
+
+<script>
+function sendMessage() {
+  alert("✅ Message sent! We will contact you soon.");
+}
+</script>
 
 </body>
 </html>
