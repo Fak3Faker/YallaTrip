@@ -516,3 +516,125 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ================= PRICING ================= */
+.pricing {
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.pricing h1 {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+/* container */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* card */
+.pricing-card {
+  width: 320px;
+  border-radius: 25px;
+  padding: 30px;
+  text-align: left;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* FREE */
+.pricing-card.free {
+  background: #f5f5f5;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* PREMIUM */
+.pricing-card.premium {
+  background: linear-gradient(135deg, #3a1f1a, #5a2e26);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* hover */
+.pricing-card:hover {
+  transform: translateY(-8px);
+}
+
+/* badge */
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #ff7a18;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* price */
+.price {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.price span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* desc */
+.desc {
+  opacity: 0.7;
+}
+
+/* list */
+.pricing-card ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.pricing-card li {
+  margin: 10px 0;
+}
+
+/* off features */
+.off {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+/* buttons */
+.btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* free btn */
+.free-btn {
+  background: #d35400;
+  color: white;
+}
+
+/* premium btn */
+.premium-btn {
+  background: #ff7a18;
+  color: white;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
