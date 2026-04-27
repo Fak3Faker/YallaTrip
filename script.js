@@ -187,14 +187,14 @@ function getImage(activity) {
     "Photography tour": "https://cdn.getyourguide.com/img/tour/8567fed85115e67c.jpeg/155.jpg",
     "Chill in local café": "https://thegingerwanderlust.com/wp-content/uploads/2024/07/IMG_0582-scaled.jpeg",
     "Mountain hiking": "https://www.patharoundtheworld.com/wp-content/uploads/2017/10/resize_DSC5401_135.jpg",
-    "Sunset viewpoint": "https://www.photohound.co/images/1032841l.jpg",
+    "Sunset viewpoint": "https://janameerman.com/wp-content/uploads/2023/11/jana-meerman-sunset-spanish-mosque-chefchaouen-morocco-9.jpg",
     "Local artisan visit": "https://www.ntla9awfbladna.ma/images/activity-shopping-aux-couleurs-du-terroir-1747153308.png",
     "Medina walk": "https://www.myfreerangefamily.com/wp-content/uploads/2022/11/Chefchaouen-Top-Things-to-Do-Itinerary-Medina-Morning-Walk-3.jpg",
     "Nature escape": "https://cdn.getyourguide.com/img/tour/89a51971be5bf7b5edb17a9be07da19d5fcbb7e01d428f0e68a757677bb38426.jpg/68.jpg",
     "Panorama viewpoint": "https://thumbs.dreamstime.com/b/chefchaouen-morocco-panoramic-view-27185617.jpg",
     "Shopping handmade crafts": "https://static.vecteezy.com/system/resources/thumbnails/046/410/177/small_2x/moroccan-handmade-crafts-carpets-clothes-bags-and-other-products-hanging-over-the-wall-on-the-streets-of-chefchaouen-medina-the-blue-city-in-morocco-variety-of-souvenirs-for-sale-photo.jpg",
     "Relaxation day": "https://bilder.retreaturlaub.de/uploads/listings/43332/pictures/128284/large/retreaturlaub-9-day-yoga-and-culture-retreat-in-northern-morocco-from-casablanca-to-chefchaouen-and-tangier-fae262573eb474bc3031f4d81b8bd67e.webp",
-    "Tea terrace experience": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE2Cx4dKVu3GtvB_S6e-2_kXpobzvKmuH3yQ&s",
+    "Tea terrace experience": "https://media-cdn.tripadvisor.com/media/photo-s/01/a8/8b/d2/tea-on-the-terrace.jpg",
     "Hidden streets exploration": "https://www.takemetotravel.com/wp-content/uploads/2024/02/Exploring-the-Blue-Streets-of-Chefchaouen-.webp",
 
     // ===== TANGER =====
