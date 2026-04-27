@@ -122,16 +122,37 @@ function normalizeDestination(dest) {
 
   return map[dest] || dest;
 }
-
-function getImage(destination) {
+function getImage(activity) {
   const images = {
-    marrakech: "https://images.unsplash.com/photo-1548013146-72479768bada",
-    merzouga: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-    chefchaouen: "https://images.unsplash.com/photo-1524492449090-1f0c9d5c2b57",
-    tanger: "https://images.unsplash.com/photo-1589308078054-832e3b9c8c41"
+    // MARRAKECH
+    "Visit Jemaa el-Fnaa": "marrakech.jpg",
+    "Explore souks": "marrakech.jpg",
+    "Luxury Hammam experience": "marrakech.jpg",
+    "Atlas Mountains day trip": "marrakech.jpg",
+    "Traditional Moroccan dinner": "marrakech.jpg",
+
+    // MERZOUGA
+    "Camel trekking": "merzouga.jpg",
+    "Luxury desert camp": "merzouga.jpg",
+    "Sunset dunes": "merzouga.jpg",
+    "4x4 desert adventure": "merzouga.jpg",
+    "Stargazing night": "merzouga.jpg",
+
+    // CHEFCHAOUEN
+    "Explore blue streets": "chefchaouen.jpg",
+    "Ras El Maa waterfall": "chefchaouen.jpg",
+    "Photography tour": "chefchaouen.jpg",
+    "Chill in local café": "chefchaouen.jpg",
+    "Mountain hiking": "chefchaouen.jpg",
+
+    // TANGER
+    "Kasbah visit": "tanger.jpg",
+    "Cap Spartel": "tanger.jpg",
+    "Cafe Hafa sunset": "tanger.jpg",
+    "Beach walk": "tanger.jpg"
   };
 
-  return images[destination] || "https://images.unsplash.com/photo-1501785888041-af3ef285b470";
+  return images[activity] || "acceuil.jpeg";
 }
 
 function getHotelPrice(budget, days) {
