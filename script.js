@@ -20,8 +20,28 @@ function generateTrip() {
 
   loader.classList.remove("hidden");
   result.classList.add("hidden");
-  output.innerHTML = "";
+ output.innerHTML += `
+  <div class="trip-card">
 
+    <img src="${getImage(morning)}" class="trip-img">
+
+    <div class="trip-info">
+      <h3>Day ${i}</h3>
+      <p><strong>📍 ${capitalize(destination)}</strong></p>
+
+      <p class="activity-text active"> 09:00 — ${morning}</p>
+      <p class="activity-text hidden"> 18:00 — ${evening}</p>
+
+      <div class="switch-btn" onclick="toggleActivity(this)">
+        ➡️
+      </div>
+
+      <p>💰 ${dailyBudget} DH</p>
+      <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
+    </div>
+
+  </div>
+`;
   // ================= ACTIVITIES =================
   const activities = {
     marrakech: [
@@ -231,4 +251,10 @@ function getHotelPrice(budget, days) {
   if (avg < 200) return 80 + Math.floor(Math.random() * 40);
   if (avg < 500) return 150 + Math.floor(Math.random() * 100);
   return 300 + Math.floor(Math.random() * 200);
+}
+function toggleActivity(btn) {
+  const card = btn.closest(".trip-info");
+  const activities = card.querySelectorAll(".activity-text");
+
+  activities.forEach(el => el.classList.toggle("hidden"));
 }
