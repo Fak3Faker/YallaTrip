@@ -110,21 +110,22 @@ output.innerHTML = "";
     <div class="trip-img-container">
       <img src="${getImage(morning)}" class="trip-img">
 
-      <div class="arrow left" onclick="prevActivity(this)">⬅️</div>
-      <div class="arrow right" onclick="nextActivity(this)">➡️</div>
+      <button class="arrow left" onclick="switchActivity(this, 'morning')"></button>
+      <button class="arrow right" onclick="switchActivity(this, 'evening')"></button>
     </div>
 
     <div class="trip-info">
       <h3>Day ${i}</h3>
       <p><strong>📍 ${capitalize(destination)}</strong></p>
 
-      <p class="activity-text"> 09:00 — ${morning}</p>
+      <p class="activity-text" data-state="morning">
+         09:00 — ${morning}
+      </p>
 
-      <!-- stocker evening caché -->
-      <span class="hidden evening-data">${evening}</span>
       <span class="hidden morning-data">${morning}</span>
+      <span class="hidden evening-data">${evening}</span>
 
-      <p> ${dailyBudget} DH</p>
+      <p>💰 ${dailyBudget} DH</p>
       <p> Hotel: ${getHotelPrice(budget, days)} DH/night</p>
     </div>
 
