@@ -303,17 +303,14 @@ function prevActivity(btn) {
 window.onload = function () {
   const banner = document.getElementById("cookie-popup");
 
-  if (!localStorage.getItem("cookiesChoice")) {
-    banner.classList.remove("hidden");
-  }
+  // 🔥 force l'affichage à chaque fois (comme tu veux)
+  banner.classList.remove("hidden");
 };
 
 function acceptCookies() {
-  localStorage.setItem("cookiesChoice", "accepted");
   document.getElementById("cookie-popup").classList.add("hidden");
 }
 
 function declineCookies() {
-  localStorage.setItem("cookiesChoice", "refused");
   document.getElementById("cookie-popup").classList.add("hidden");
 }
