@@ -20,28 +20,7 @@ function generateTrip() {
 
   loader.classList.remove("hidden");
   result.classList.add("hidden");
- output.innerHTML += `
-  <div class="trip-card">
-
-    <img src="${getImage(morning)}" class="trip-img">
-
-    <div class="trip-info">
-      <h3>Day ${i}</h3>
-      <p><strong>📍 ${capitalize(destination)}</strong></p>
-
-      <p class="activity-text active"> 09:00 — ${morning}</p>
-      <p class="activity-text hidden"> 18:00 — ${evening}</p>
-
-      <div class="switch-btn" onclick="toggleActivity(this)">
-        ➡️
-      </div>
-
-      <p>💰 ${dailyBudget} DH</p>
-      <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
-    </div>
-
-  </div>
-`;
+output.innerHTML = "";
   // ================= ACTIVITIES =================
   const activities = {
     marrakech: [
@@ -126,21 +105,27 @@ function generateTrip() {
       );
 
       output.innerHTML += `
-        <div class="trip-card">
-          <img src="${getImage(morning)}" class="trip-img">
+  <div class="trip-card">
 
-          <div class="trip-info">
-            <h3>Day ${i}</h3>
-            <p><strong>📍 ${capitalize(destination)}</strong></p>
+    <img src="${getImage(morning)}" class="trip-img">
 
-            <p class="morning"> 09:00 — ${morning}</p>
-            <p class="evening"> 18:00 — ${evening}</p>
+    <div class="trip-info">
+      <h3>Day ${i}</h3>
+      <p><strong>📍 ${capitalize(destination)}</strong></p>
 
-            <p>💰 ${dailyBudget} DH</p>
-            <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
-          </div>
-        </div>
-      `;
+      <p class="activity-text active"> 09:00 — ${morning}</p>
+      <p class="activity-text hidden"> 18:00 — ${evening}</p>
+
+      <div class="switch-btn" onclick="toggleActivity(this)">
+        ➡️
+      </div>
+
+      <p>💰 ${dailyBudget} DH</p>
+      <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
+    </div>
+
+  </div>
+`;
     }
 
     result.scrollIntoView({ behavior: "smooth" });
