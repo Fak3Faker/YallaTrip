@@ -67,6 +67,14 @@ output.innerHTML = "";
 
   // 👉 IMPORTANT
   const selectedActivities = activities[destination] || activities["default"];
+  const morning = getUniqueActivity(
+  dayActivities.length ? dayActivities : selectedActivities
+);
+
+const evening = getUniqueActivity(
+  nightActivities.length ? nightActivities : selectedActivities
+);
+  
 
   if (!activities[destination]) {
     alert("Destination not fully supported yet. Showing a generic trip.");
@@ -96,9 +104,13 @@ output.innerHTML = "";
 
     for (let i = 1; i <= days; i++) {
 
-      const morning = getUniqueActivity(selectedActivities);
-      const evening = getUniqueActivity(selectedActivities);
+      const morning = getUniqueActivity(
+  dayActivities.length ? dayActivities : selectedActivities
+);
 
+const evening = getUniqueActivity(
+  nightActivities.length ? nightActivities : selectedActivities
+);
       const dailyBudget = Math.round(
         (budget / days) * (0.8 + Math.random() * 0.4)
       );
