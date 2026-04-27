@@ -96,8 +96,8 @@ function generateTrip() {
             <h3>Day ${i}</h3>
             <p><strong>📍 ${capitalize(destination)}</strong></p>
 
-            <p class="morning">🌅 09:00 — ${morning}</p>
-            <p class="evening">🌙 18:00 — ${evening}</p>
+            <p class="morning"> 09:00 — ${morning}</p>
+            <p class="evening"> 18:00 — ${evening}</p>
 
             <p>💰 ${dailyBudget} DH</p>
             <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
