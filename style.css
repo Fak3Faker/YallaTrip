@@ -1079,21 +1079,13 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(6px);
+  z-index: 10; /* 🔥 IMPORTANT */
   cursor: pointer;
-  transition: 0.3s;
-  opacity: 0;
 }
 
-.trip-img-container:hover .arrow {
-  opacity: 1;
+.trip-img {
+  pointer-events: none; /* 🔥 évite blocage clic */
 }
-
 .arrow.left {
   left: 10px;
 }
