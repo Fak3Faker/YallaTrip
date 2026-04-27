@@ -463,70 +463,56 @@ body {
 .cta-btn:hover {
   background: #ff7a18;
 }
-/* ================= STATS PREMIUM ================= */
+/* ================= STATS (MATCH SITE DA) ================= */
 .stats {
-  background: #0b0f14;
-  color: white;
-  padding: 100px 40px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-/* chaque bloc */
-.stat {
+  padding: 80px 40px;
+  margin-top: -60px;
   position: relative;
+  z-index: 5;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-/* ligne séparation verticale */
-.stat:nth-child(odd)::after {
-  content: "";
-  position: absolute;
-  right: -30px;
-  top: 20%;
-  height: 60%;
-  width: 1px;
-  background: rgba(255,255,255,0.1);
+/* carte */
+.stat {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
-/* ligne séparation horizontale */
-.stat:nth-child(1),
-.stat:nth-child(2) {
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 40px;
+/* hover premium */
+.stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 /* chiffres */
 .stat h2 {
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 10px;
-}
 
-/* effet couleur + */
-.stat h2 span {
-  color: #00ff88;
+  background: linear-gradient(135deg, #d35400, #ff7a18);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* texte */
 .stat p {
   font-size: 14px;
-  opacity: 0.6;
-  letter-spacing: 1px;
+  color: #555;
 }
 
 /* responsive */
 @media (max-width: 768px) {
   .stats {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
-
-  .stat:nth-child(odd)::after {
-    display: none;
-  }
-}
 }
