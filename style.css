@@ -1080,12 +1080,12 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
 
-  background: rgba(0, 0, 0, 0.18); /* 🔥 plus léger */
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15); /* 🔥 plus léger */
+  backdrop-filter: blur(6px);
 
   display: flex;
   align-items: center;
@@ -1097,20 +1097,20 @@ body {
   opacity: 0;
 }
 
-/* apparition douce */
+/* apparition */
 .trip-img-container:hover .arrow {
   opacity: 1;
 }
 
 /* position */
-.arrow.left { left: 12px; }
-.arrow.right { right: 12px; }
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
 
-/* flèche ULTRA CLEAN */
+/* flèche fine */
 .arrow::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 
   border-right: 2px solid white;
   border-top: 2px solid white;
@@ -1127,13 +1127,13 @@ body {
   transform: rotate(45deg);
 }
 
-/* hover premium */
+/* hover subtil */
 .arrow:hover {
-  background: rgba(0, 0, 0, 0.35);
-  transform: translateY(-50%) scale(1.08);
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.05);
 }
 
-/* click feedback (ultra important) */
+/* click feedback */
 .arrow:active {
-  transform: translateY(-50%) scale(0.95);
+  transform: translateY(-50%) scale(0.92);
 }
