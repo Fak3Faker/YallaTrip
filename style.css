@@ -1112,3 +1112,59 @@ body {
 .arrow:hover {
   background: rgba(0,0,0,0.6);
 }
+/* IMAGE SMOOTH */
+.trip-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+/* FADE OUT */
+.fade-out {
+  opacity: 0;
+}
+
+/* FADE IN */
+.fade-in {
+  opacity: 1;
+}
+
+/* TEXTE ANIMATION */
+.activity-text {
+  font-weight: 600;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+/* FLÈCHES PREMIUM */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.trip-img-container:hover .arrow {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.arrow.left { left: 12px; }
+.arrow.right { right: 12px; }
