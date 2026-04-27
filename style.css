@@ -205,7 +205,6 @@ body {
 }
 
 .discover-cards {
-  justify-content: center;
   display: flex;
   gap: 20px;
   overflow-x: auto;
