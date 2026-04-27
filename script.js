@@ -110,8 +110,8 @@ output.innerHTML = "";
     <div class="trip-img-container">
       <img src="${getImage(morning)}" class="trip-img">
 
-      <div class="arrow left" onclick="prevActivity(this)">❮</div>
-      <div class="arrow right" onclick="nextActivity(this)">❯</div>
+   <div class="arrow left" onclick="prevActivity(this)"></div>
+<div class="arrow right" onclick="nextActivity(this)"></div>
     </div>
 
     <div class="trip-info">
