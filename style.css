@@ -195,9 +195,9 @@ body {
 
 /* ================= DISCOVER ================= */
 .discover {
+  width: 100%;
   padding: 100px 40px;
-  margin-top: 60px;
-  position: relative;
+  background: transparent;
 }
 
 .discover h2 {
