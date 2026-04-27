@@ -104,24 +104,28 @@ output.innerHTML = "";
         (budget / days) * (0.8 + Math.random() * 0.4)
       );
 
-      output.innerHTML += `
+     output.innerHTML += `
   <div class="trip-card">
 
-    <img src="${getImage(morning)}" class="trip-img">
+    <div class="trip-img-container">
+      <img src="${getImage(morning)}" class="trip-img">
+
+      <div class="arrow left" onclick="prevActivity(this)">⬅️</div>
+      <div class="arrow right" onclick="nextActivity(this)">➡️</div>
+    </div>
 
     <div class="trip-info">
       <h3>Day ${i}</h3>
       <p><strong>📍 ${capitalize(destination)}</strong></p>
 
-      <p class="activity-text active"> 09:00 — ${morning}</p>
-      <p class="activity-text hidden"> 18:00 — ${evening}</p>
+      <p class="activity-text"> 09:00 — ${morning}</p>
 
-      <div class="switch-btn" onclick="toggleActivity(this)">
-        ➡️
-      </div>
+      <!-- stocker evening caché -->
+      <span class="hidden evening-data">${evening}</span>
+      <span class="hidden morning-data">${morning}</span>
 
-      <p>💰 ${dailyBudget} DH</p>
-      <p>🏨 Hotel: ${getHotelPrice(budget, days)} DH/night</p>
+      <p> ${dailyBudget} DH</p>
+      <p> Hotel: ${getHotelPrice(budget, days)} DH/night</p>
     </div>
 
   </div>
