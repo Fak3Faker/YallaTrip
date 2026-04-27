@@ -1073,41 +1073,45 @@ body {
 }
 .trip-img-container {
   position: relative;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
 }
-
 .arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) scale(0.9);
-  width: 38px;
-  height: 38px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.25s;
   opacity: 0;
 }
 
+/* apparition hover */
 .trip-img-container:hover .arrow {
   opacity: 1;
-  transform: translateY(-50%) scale(1);
 }
 
-.arrow.left { left: 12px; }
-.arrow.right { right: 12px; }
+/* position */
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
 
+/* flèche dessinée */
 .arrow::before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border: solid white;
   border-width: 2px 2px 0 0;
 }
 
+/* orientation */
 .arrow.left::before {
   transform: rotate(-135deg);
 }
@@ -1116,6 +1120,8 @@ body {
   transform: rotate(45deg);
 }
 
+/* hover */
 .arrow:hover {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.45);
+  transform: translateY(-50%) scale(1.1);
 }
