@@ -195,21 +195,18 @@ body {
 
 /* ================= DISCOVER ================= */
 .discover {
-  width: 100%;
-  padding: 100px 40px;
-  background: transparent;
+  width: 100vw;          /* 🔥 prend toute la largeur écran */
+  margin-left: calc(-50vw + 50%); /* 🔥 casse le centrage */
+  padding: 100px 0;      /* enlève padding horizontal */
 }
 
 .discover h2 {
-  font-size: 40px;
-  margin-bottom: 40px;
+  margin-left: 20px;
 }
 
 .discover-cards {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  padding-left: 20px;
+  padding-right: 60px; /* coupe à droite */
 }
 
 .discover-cards::-webkit-scrollbar {
