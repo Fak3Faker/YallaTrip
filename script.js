@@ -166,21 +166,23 @@ function getHotelPrice(budget, days) {
 
 // afficher popup si jamais accepté
 window.addEventListener("load", () => {
-  const accepted = localStorage.getItem("cookiesAccepted");
+  const choice = localStorage.getItem("cookiesChoice");
 
-  if (!accepted) {
+  if (!choice) {
     document.getElementById("cookie-popup").classList.remove("hidden");
   }
 });
 
-// accepter
 function acceptCookies() {
-  localStorage.setItem("cookiesAccepted", "true");
-  document.getElementById("cookie-popup").classList.add("hidden");
+  localStorage.setItem("cookiesChoice", "accepted");
+  closePopup();
 }
 
-// refuser
 function declineCookies() {
-  localStorage.setItem("cookiesAccepted", "false");
+  localStorage.setItem("cookiesChoice", "declined");
+  closePopup();
+}
+
+function closePopup() {
   document.getElementById("cookie-popup").classList.add("hidden");
 }
