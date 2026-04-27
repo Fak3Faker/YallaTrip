@@ -162,3 +162,25 @@ function getHotelPrice(budget, days) {
   if (avg < 500) return 150 + Math.floor(Math.random() * 100);
   return 300 + Math.floor(Math.random() * 200);
 }
+// ================= COOKIE POPUP =================
+
+// afficher popup si jamais accepté
+window.addEventListener("load", () => {
+  const accepted = localStorage.getItem("cookiesAccepted");
+
+  if (!accepted) {
+    document.getElementById("cookie-popup").classList.remove("hidden");
+  }
+});
+
+// accepter
+function acceptCookies() {
+  localStorage.setItem("cookiesAccepted", "true");
+  document.getElementById("cookie-popup").classList.add("hidden");
+}
+
+// refuser
+function declineCookies() {
+  localStorage.setItem("cookiesAccepted", "false");
+  document.getElementById("cookie-popup").classList.add("hidden");
+}
