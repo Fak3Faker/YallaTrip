@@ -935,15 +935,17 @@ body {
 /* ================= COOKIE POPUP ================= */
 .cookie-popup {
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
   z-index: 3000;
+  pointer-events: none; /* 🔥 permet de cliquer derrière */
 }
 
 .cookie-box {
+  pointer-events: all; /* seulement la box est cliquable */
   background: white;
   padding: 30px;
   border-radius: 20px;
