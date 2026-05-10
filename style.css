@@ -1170,3 +1170,34 @@ body {
   transform: translateY(-4px) scale(1.08);
 }
 background: transparent;
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.socials span {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background: rgba(0,0,0,0.05);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.socials img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.socials span:hover {
+  background: #ff7a18;
+  transform: translateY(-4px);
+}
